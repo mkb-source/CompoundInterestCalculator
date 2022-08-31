@@ -1,2 +1,2 @@
-# CompoundInterestCalculator
-This is a compound interest calculator that I built using R. The word document attached gives instructions on how to use it. It was a required assignment for a class where we were required to create a name and mission statement for our "bank". 
+# Compound Interest Calculator
+This is a compound interest calculator that I built using R. The word document attached gives instructions on how to use it. It was a required assignment for a class where we were required to create a name and mission statement for our "bank". The result of this calculator provides a graphical representation of how money grows over time, with a statement providing the exact amount in $ over the user-input time period at a certain interest rate. 
