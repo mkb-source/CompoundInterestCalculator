@@ -1,0 +1,42 @@
+---
+title: "hw3"
+author: "Makenzie Barber"
+date: "2022-07-20"
+
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#[1] forloop 
+Understanding_Your_Investment <- function(P,r,t) {
+  P <- as.numeric(readline("How much money will you would you like to invest?"))
+  if(class(P) !="numeric") {
+    stop("The calculator will now start over. Please enter a number value for this prompt.")
+  }
+  r <- as.numeric(readline("What is your personalized interest rate?"))
+  if(class(r) !="numeric") {
+    stop("The calculator will now start over. Please enter a number value for this prompt.")
+  }
+    
+  t <- as.numeric(readline("How many months would you like your money to grow?"))
+  if(class(r) !="numeric") {
+    stop("The calculator will now start over. Please enter a number value for this prompt.")
+    
+  }
+  
+  for (i in 2:t) {
+  P[i] <- P[i-1]*(1 + (r/12))
+  }
+  print(plot(x= 1:t, y= P, type= "b", main = "Growth Over Time", xlab = "Time", ylab = "Interest Growth"))
+  paste("Your money could accumulate to $",round(tail(P,1),2), "at the end of", t, "months.")
+  
+}
+Understanding_Your_Investment()
+```
+
+
+```{r}
